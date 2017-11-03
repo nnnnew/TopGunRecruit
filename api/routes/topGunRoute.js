@@ -8,5 +8,9 @@ module.exports = function(app) {
 	app.route('/users/clear_database')
 		.delete(user.clear_database);
 
+	//problems routing
+	var problems = require('../controllers/problemsController')
+	app.route('/problems/get_problems')
+		.get(problems.get_problems)
 	
 }
