@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var UsersSchema = new Schema ({
-	user_ID: {
+	user_id: {
 		type: Number,
 		unique: true,
 		required: 'Please enter the your student id'
