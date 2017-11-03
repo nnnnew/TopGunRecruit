@@ -10,7 +10,7 @@ var ProblemsSchema = new Schema ({
 		type: String,
 		required: true
 	},
-	proablems_score: {
+	problems_score: {
 		type: Number,
 		required: true
 	}

@@ -11,6 +11,8 @@ module.exports = function(app) {
 	//problems routing
 	var problems = require('../controllers/problemsController')
 	app.route('/problems/get_problems')
-		.get(problems.get_problems)
-	
+		.get(problems.get_problems);
+
+	app.route('/problems/create_problems')
+		.post(problems.create_problems);
 }
