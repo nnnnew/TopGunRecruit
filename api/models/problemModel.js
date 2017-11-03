@@ -15,7 +15,8 @@ var ProblemsSchema = new Schema ({
 		required: true
 	},
 	user_id_solved: {
-		type: String
+		type: [Number],
+		default: undefined
 	}
 });
 

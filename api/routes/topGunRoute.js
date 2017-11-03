@@ -8,7 +8,7 @@ module.exports = function(app) {
 
     app.route('/problem')
         .get(problem.get_problems);
-    
+
     app.route('problem/id')
         .get(problem.get_id);
 
@@ -18,6 +18,10 @@ module.exports = function(app) {
 
 	app.route('/problem/create')
 		.post(problem.create_problems);
+
+    //update routing
+	app.route('/problem/answer')
+		.patch(problem.update_answer);
 
     //delete routing
     app.route('/users/clear_database')
