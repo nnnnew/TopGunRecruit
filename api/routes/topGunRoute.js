@@ -1,18 +1,29 @@
 module.exports = function(app) {
 	var user = require('../controllers/userController');
-	//user routing
-	app.route('/users') 
-		.post(user.create_user)
+    var problem = require('../controllers/problemController');
+    var result = require('../controllers/resultController')
+
+	//get routing
+	app.route('/user')
 		.get(user.get_users);
 
-	app.route('/users/clear_database')
-		.delete(user.clear_database);
+    app.route('/problem')
+        .get(problem.get_problems);
 
-	//problems routing
-	var problems = require('../controllers/problemsController')
-	app.route('/problems/get_problems')
-		.get(problems.get_problems);
+    app.route('/result')
+		.get(result.get_result);
 
-	app.route('/problems/create_problems')
-		.post(problems.create_problems);
+	//post routing
+    app.route('/user/create')
+        .post(user.create_user)
+
+	app.route('/problem/create')
+		.post(problem.create_problems);
+
+    app.route('/result/create')
+        .post(result.create_result);
+
+    //delete routing
+    app.route('/users/clear_database')
+        .delete(user.clear_database);
 }

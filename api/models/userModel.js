@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var UserSchema = new Schema ({
+var UsersSchema = new Schema ({
 	user_ID: {
 		type: Number,
 		unique: true,
@@ -9,7 +9,7 @@ var UserSchema = new Schema ({
 	},
 	first_name: {
 		type: String,
-		required: 'Enter fist name of student'
+		required: 'Enter first name of student'
 	},
 	last_name: {
 		type: String,
@@ -21,4 +21,4 @@ var UserSchema = new Schema ({
 	}
 });
 
-module.exports = mongoose.model('User', UserSchema);
+module.exports = mongoose.model('Users', UsersSchema);
