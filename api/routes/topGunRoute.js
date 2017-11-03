@@ -8,7 +8,8 @@ module.exports = function(app) {
 
     app.route('/problem')
         .get(problem.get_problems);
-    aoo.route('problem/id')
+    
+    app.route('problem/id')
         .get(problem.get_id);
 
 	//post routing
