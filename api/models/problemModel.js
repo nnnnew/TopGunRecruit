@@ -13,7 +13,11 @@ var ProblemsSchema = new Schema ({
 	problems_score: {
 		type: Number,
 		required: true
+	},
+	user_id_solved: {
+		type: String
 	}
 });
 
 module.exports = mongoose.model('Problems', ProblemsSchema);
+

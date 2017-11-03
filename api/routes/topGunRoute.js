@@ -1,7 +1,6 @@
 module.exports = function(app) {
 	var user = require('../controllers/userController');
     var problem = require('../controllers/problemController');
-    var result = require('../controllers/resultController')
 
 	//get routing
 	app.route('/user')
@@ -9,9 +8,8 @@ module.exports = function(app) {
 
     app.route('/problem')
         .get(problem.get_problems);
-
-    app.route('/result')
-		.get(result.get_result);
+    aoo.route('problem/id')
+        .get(problem.get_id);
 
 	//post routing
     app.route('/user/create')
@@ -19,9 +17,6 @@ module.exports = function(app) {
 
 	app.route('/problem/create')
 		.post(problem.create_problems);
-
-    app.route('/result/create')
-        .post(result.create_result);
 
     //delete routing
     app.route('/users/clear_database')

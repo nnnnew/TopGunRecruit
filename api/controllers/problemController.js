@@ -17,3 +17,11 @@ exports.create_problems = function(req, res) {
 		res.send("problem was created");
 	});
 };
+
+exports.get_id = function(req, res) {
+	Problems.find({}, '_id', function(err, result) {
+        if(err)
+            res.send("cannot get result from the database");
+        res.json(result);
+    });
+};
