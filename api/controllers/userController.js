@@ -25,3 +25,4 @@ exports.clear_database = function(req, res) {
 		res.send('deleted all users')
 	});
 };
+
