@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var Problems = new Schema ({
+var ProblemsSchema = new Schema ({
 	problems_detail: {
 		type: String,
 		required: true
@@ -9,5 +9,11 @@ var Problems = new Schema ({
 	problems_result: {
 		type: String,
 		required: true
+	},
+	proablems_score: {
+		type: Number,
+		required: true
 	}
 });
+
+module.exports = mongoose.model('Problems', ProblemsSchema);

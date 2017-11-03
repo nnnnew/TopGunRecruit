@@ -4,7 +4,7 @@ var express = require('express'),
 	mongoose = require('mongoose'),
 	// importing model
 	User = require('./api/models/userModel'),
-	Problems = require('./api/models/problemsModel')
+	Problems = require('./api/models/problemsModel'),
 	bodyParser = require('body-parser');
 
 mongoose.Promise = global.Promise;
