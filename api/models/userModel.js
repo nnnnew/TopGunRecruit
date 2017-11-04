@@ -14,10 +14,6 @@ var UsersSchema = new Schema ({
 	last_name: {
 		type: String,
 		required: 'Enter last name of student'
-	},
-	status: {
-		type: Number,
-		default: 0
 	}
 });
 

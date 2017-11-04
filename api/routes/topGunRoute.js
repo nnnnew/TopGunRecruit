@@ -24,6 +24,9 @@ module.exports = function(app) {
 		.patch(problem.update_answer);
 
     //delete routing
-    app.route('/users/clear_database')
+    app.route('/user/clear_database')
         .delete(user.clear_database);
+
+    app.route('/problem/clear_database')
+        .delete(problem.clear_database);
 }

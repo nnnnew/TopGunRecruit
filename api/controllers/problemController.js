@@ -34,3 +34,11 @@ exports.update_answer = function (req, res) {
         res.json(problem);
     });
 };
+
+exports.clear_database = function(req, res) {
+    Problem.remove({}, function(err) {
+        if(err)
+            res.send('err')
+        res.send('deleted all problems')
+    });
+};
