@@ -6,11 +6,14 @@ module.exports = function(app) {
 	app.route('/user')
 		.get(user.get_users);
 
+    app.route('/user/:user_id')
+        .get(user.get_user);
+
     app.route('/problem')
         .get(problem.get_problems);
 
-    app.route('problem/id')
-        .get(problem.get_id);
+    app.route('/problem/:id')
+        .get(problem.get_problem);
 
 	//post routing
     app.route('/user/create')

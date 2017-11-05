@@ -10,6 +10,10 @@ var ProblemsSchema = new Schema ({
 		type: String,
 		required: true
 	},
+    problems_file: {
+        type: String,
+        default: ""
+    },
 	problems_score: {
 		type: Number,
 		required: true
