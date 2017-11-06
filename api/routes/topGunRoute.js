@@ -32,4 +32,7 @@ module.exports = function(app) {
 
     app.route('/problem/clear_database')
         .delete(problem.clear_database);
+
+    app.route('/problem/:id')
+        .delete(problem.delete_problem);
 }

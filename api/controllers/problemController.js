@@ -41,6 +41,17 @@ exports.update_answer = function (req, res) {
     });
 };
 
+exports.delete_problem = function(req, res) {
+    Problem.deleteOne({_id: req.params.id}, function(err) {
+        if(err){
+            res.status(500).send(err);
+        }
+        else{
+            res.send('deleted problem');
+        }
+    });
+};
+
 exports.clear_database = function(req, res) {
     Problem.remove({}, function(err) {
         if(err){
