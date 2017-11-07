@@ -41,6 +41,17 @@ exports.update_answer = function (req, res) {
     });
 };
 
+exports.clear_user = function (req, res) {
+    Problem.update(Problem.user_id_solved,{ $set: {user_id_solved: []}}, {multi: true}, function (err, problem) {
+            if(err){
+                res.status(500).send(err);
+            }
+            else{
+                res.json(problem);
+            }
+        });
+};
+
 exports.delete_problem = function(req, res) {
     Problem.deleteOne({_id: req.params.id}, function(err) {
         if(err){

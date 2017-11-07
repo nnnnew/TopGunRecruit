@@ -26,6 +26,9 @@ module.exports = function(app) {
 	app.route('/problem/answer')
 		.patch(problem.update_answer);
 
+	app.route('/problem/clear_user')
+        .patch(problem.clear_user);
+
     //delete routing
     app.route('/user/clear_database')
         .delete(user.clear_database);
